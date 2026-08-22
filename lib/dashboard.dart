@@ -26,58 +26,79 @@ class Dashboard extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: SizedBox(
             width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-              "Hello User!",
-               style: TextStyle(
-               fontSize: 30,
-                 height: 5,
-               fontWeight: FontWeight.bold,
-                 fontStyle: FontStyle.italic,
-                 decoration: TextDecoration.underline,
-              ),
-              ),
-
-              Text('Name',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              SizedBox(height: 20),
-              TextField(
-                decoration: InputDecoration (
-                  hintText: 'Enter your name',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-              ElevatedButton(
-                  onPressed:() {
-                    print("Submit Button Clicked");
-                  },
-                    style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple,
-                    foregroundColor: Colors.white,
-                    ),
-                    child: Text('Submit',
-                    style: TextStyle(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Hello User!",
+                  style: TextStyle(
                     fontSize: 30,
-                    fontWeight: FontWeight.w100,
+                    height: 5,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+
+                const SizedBox(height: 30),
+
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(25),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.purple,
+                      width: 2,
                     ),
-                    ),
-              ),
-            ],
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+
+                  child: Column(
+                    children: [
+                      const Text(
+                        'Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+
+                      const SizedBox(height: 20),
+
+                      TextField(
+                        decoration: const InputDecoration(
+                          hintText: 'Enter your name',
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+
+                      const SizedBox(height: 20),
+
+                      ElevatedButton(
+                        onPressed: () {
+                          print("Submit Button Clicked");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.purple,
+                          foregroundColor: Colors.white,
+                        ),
+                        child: const Text(
+                          'Submit',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w100,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-        ),
-        ),
           ),
+        ),
+      ),
     );
   }
 }
