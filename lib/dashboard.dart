@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'SecondScreen.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -77,7 +78,12 @@ class Dashboard extends StatelessWidget {
 
                       ElevatedButton(
                         onPressed: () {
-                          print("Submit Button Clicked");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SecondScreen(),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.purple,
